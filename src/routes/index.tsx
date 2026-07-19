@@ -289,12 +289,13 @@ function Home() {
                   <input required type="time" className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition" />
                 </label>
               </div>
-              <label className="block">
+              <label htmlFor="reservation-guests" className="block">
                 <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Guests</span>
-                <select className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition">
+                <select id="reservation-guests" name="guests" aria-label="Number of guests" className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition">
                   {[1,2,3,4,5,6,7,8].map((n) => <option key={n}>{n} {n===1?"guest":"guests"}</option>)}
                 </select>
               </label>
+
               <label className="block">
                 <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phone</span>
                 <input required className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition" />
