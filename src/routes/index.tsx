@@ -191,10 +191,10 @@ function Home() {
                       <div className="flex-1">
                         <div className="flex items-baseline gap-3">
                           <h4 className="text-lg text-white">{item.name}</h4>
-                          <span className="flex-1 border-b border-dotted border-white/25 translate-y-[-4px]" />
+                          <span className="flex-1 border-b border-dotted border-white/40 translate-y-[-4px]" />
                           <span className="text-[color:var(--gold)] font-medium">{item.price} DH</span>
                         </div>
-                        <p className="mt-1 text-sm text-white/60 leading-relaxed">{item.desc}</p>
+                        <p className="mt-1 text-sm text-white/80 leading-relaxed">{item.desc}</p>
                       </div>
                     </li>
                   ))}
@@ -257,12 +257,12 @@ function Home() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">Hours</div>
                   <div className="mt-2">Tue–Sun · 08:00 – 23:30</div>
-                  <div className="text-white/50 text-sm">Closed Mondays</div>
+                  <div className="text-white/75 text-sm">Closed Mondays</div>
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">Contact</div>
                   <div className="mt-2">+212 5 37 00 00 00</div>
-                  <div className="text-white/50 text-sm">bonjour@limperial-kenitra.ma</div>
+                  <div className="text-white/75 text-sm">bonjour@limperial-kenitra.ma</div>
                 </div>
               </div>
             </div>
@@ -308,7 +308,7 @@ function Home() {
         </div>
       </section>
 
-      <footer className="bg-[color:var(--foreground)] text-white/50 border-t border-white/10">
+      <footer className="bg-[color:var(--foreground)] text-white/75 border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col sm:flex-row items-center justify-between gap-4 px-6 py-8 text-xs uppercase tracking-[0.2em]">
           <div className="font-display text-lg normal-case tracking-normal text-white">L'Imperial · Kenitra</div>
           <div>© {new Date().getFullYear()} — Cucina & Cuisine</div>
