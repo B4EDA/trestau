@@ -177,16 +177,19 @@ function Home() {
 
           <div className="mt-14 grid gap-4 md:grid-cols-3 md:grid-rows-2">
             <figure className="md:row-span-2 group overflow-hidden">
-              <img src={dishAvocado} alt="Avocado and salmon toast on a blue Moroccan plate" className="h-full w-full object-cover aspect-[3/4] md:aspect-auto transition duration-700 group-hover:scale-105" loading="lazy" width={900} height={900} />
+              <img src={dishAvocado} alt="A plated dish at L'Imperial Kenitra" className="h-full w-full object-cover aspect-[3/4] md:aspect-auto transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
             <figure className="group overflow-hidden">
-              <img src={dishEggs} alt="Scrambled eggs with salmon and avocado" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" width={900} height={900} />
+              <img src={dishEggs} alt="Brunch spread at L'Imperial" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
             <figure className="group overflow-hidden">
-              <img src={dishTea} alt="Moroccan silver teapot with mint tea and fresh orange juice" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" width={900} height={900} />
+              <img src={dishTea} alt="Fresh juice service at L'Imperial" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
-            <figure className="md:col-span-2 group overflow-hidden">
-              <img src={heroPasta} alt="Tagliatelle bolognese on a blue plate" className="h-full w-full object-cover aspect-[16/9] transition duration-700 group-hover:scale-105" loading="lazy" width={1600} height={1200} />
+            <figure className="group overflow-hidden">
+              <img src={dishExtra} alt="Signature dishes at L'Imperial" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
+            </figure>
+            <figure className="group overflow-hidden">
+              <img src={dishExtra2} alt="Plates from the L'Imperial kitchen" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
           </div>
         </div>
