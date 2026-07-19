@@ -55,10 +55,8 @@ function Home() {
       <section id="top" className="relative h-[92vh] min-h-[640px] w-full overflow-hidden">
         <img
           src={heroPasta}
-          alt="Tagliatelle bolognese served on a hand-painted blue plate at L'Imperial Kenitra"
+          alt="Signature plates at L'Imperial Kenitra"
           className="absolute inset-0 h-full w-full object-cover"
-          width={1600}
-          height={1200}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-[color:var(--foreground)]/70" />
         <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center text-primary-foreground">
@@ -87,11 +85,9 @@ function Home() {
           <div className="relative">
             <img
               src={interior}
-              alt="Warm interior of L'Imperial Kenitra with terracotta walls and lantern light"
+              alt="Interior of L'Imperial Kenitra"
               className="w-full aspect-[4/5] object-cover shadow-xl"
               loading="lazy"
-              width={1600}
-              height={1000}
             />
             <div className="absolute -bottom-6 -right-6 hidden md:block border-4 border-[color:var(--gold)] w-40 h-40 -z-10" />
           </div>
