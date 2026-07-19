@@ -9,7 +9,48 @@ import interior from "@/assets/real-interior.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
+  head: () => ({
+    links: [
+      { rel: "canonical", href: "https://limperial.lovable.app/" },
+      { rel: "preload", as: "image", href: heroPasta, fetchpriority: "high" } as any,
+    ],
+    meta: [
+      { property: "og:url", content: "https://limperial.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          name: "L'Imperial",
+          image: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/05e7cca9-3a78-4ad1-b5bc-797f304de16a",
+          servesCuisine: ["Italian", "Moroccan"],
+          priceRange: "$$",
+          telephone: "+212 5 37 00 00 00",
+          email: "bonjour@limperial-kenitra.ma",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Avenue Mohammed V",
+            addressLocality: "Kenitra",
+            postalCode: "14000",
+            addressCountry: "MA",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              opens: "08:00",
+              closes: "23:30",
+            },
+          ],
+          url: "https://limperial.lovable.app/",
+        }),
+      },
+    ],
+  }),
 });
+
 
 const menu = {
   Antipasti: [
