@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroPasta from "@/assets/hero-pasta.jpg";
-import dishAvocado from "@/assets/dish-avocado.jpg";
-import dishTea from "@/assets/dish-tea.jpg";
-import dishEggs from "@/assets/dish-eggs.jpg";
-import interior from "@/assets/interior.jpg";
+import heroPasta from "@/assets/real-meals.jpg";
+import dishAvocado from "@/assets/real-food.jpg";
+import dishTea from "@/assets/real-juice.jpg";
+import dishEggs from "@/assets/real-scallops.jpg";
+import dishExtra from "@/assets/real-dishes.jpg";
+import dishExtra2 from "@/assets/real-meals2.jpg";
+import interior from "@/assets/real-interior.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
