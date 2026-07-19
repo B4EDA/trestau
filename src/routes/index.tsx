@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroPasta from "@/assets/hero-pasta.jpg";
-import dishAvocado from "@/assets/dish-avocado.jpg";
-import dishTea from "@/assets/dish-tea.jpg";
-import dishEggs from "@/assets/dish-eggs.jpg";
-import interior from "@/assets/interior.jpg";
+import heroPasta from "@/assets/real-meals.jpg";
+import dishAvocado from "@/assets/real-food.jpg";
+import dishTea from "@/assets/real-juice.jpg";
+import dishEggs from "@/assets/real-scallops.jpg";
+import dishExtra from "@/assets/real-dishes.jpg";
+import dishExtra2 from "@/assets/real-meals2.jpg";
+import interior from "@/assets/real-interior.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -53,10 +55,8 @@ function Home() {
       <section id="top" className="relative h-[92vh] min-h-[640px] w-full overflow-hidden">
         <img
           src={heroPasta}
-          alt="Tagliatelle bolognese served on a hand-painted blue plate at L'Imperial Kenitra"
+          alt="Signature plates at L'Imperial Kenitra"
           className="absolute inset-0 h-full w-full object-cover"
-          width={1600}
-          height={1200}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-[color:var(--foreground)]/70" />
         <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center text-primary-foreground">
@@ -85,11 +85,9 @@ function Home() {
           <div className="relative">
             <img
               src={interior}
-              alt="Warm interior of L'Imperial Kenitra with terracotta walls and lantern light"
+              alt="Interior of L'Imperial Kenitra"
               className="w-full aspect-[4/5] object-cover shadow-xl"
               loading="lazy"
-              width={1600}
-              height={1000}
             />
             <div className="absolute -bottom-6 -right-6 hidden md:block border-4 border-[color:var(--gold)] w-40 h-40 -z-10" />
           </div>
@@ -175,16 +173,19 @@ function Home() {
 
           <div className="mt-14 grid gap-4 md:grid-cols-3 md:grid-rows-2">
             <figure className="md:row-span-2 group overflow-hidden">
-              <img src={dishAvocado} alt="Avocado and salmon toast on a blue Moroccan plate" className="h-full w-full object-cover aspect-[3/4] md:aspect-auto transition duration-700 group-hover:scale-105" loading="lazy" width={900} height={900} />
+              <img src={dishAvocado} alt="A plated dish at L'Imperial Kenitra" className="h-full w-full object-cover aspect-[3/4] md:aspect-auto transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
             <figure className="group overflow-hidden">
-              <img src={dishEggs} alt="Scrambled eggs with salmon and avocado" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" width={900} height={900} />
+              <img src={dishEggs} alt="Brunch spread at L'Imperial" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
             <figure className="group overflow-hidden">
-              <img src={dishTea} alt="Moroccan silver teapot with mint tea and fresh orange juice" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" width={900} height={900} />
+              <img src={dishTea} alt="Fresh juice service at L'Imperial" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
-            <figure className="md:col-span-2 group overflow-hidden">
-              <img src={heroPasta} alt="Tagliatelle bolognese on a blue plate" className="h-full w-full object-cover aspect-[16/9] transition duration-700 group-hover:scale-105" loading="lazy" width={1600} height={1200} />
+            <figure className="group overflow-hidden">
+              <img src={dishExtra} alt="Signature dishes at L'Imperial" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
+            </figure>
+            <figure className="group overflow-hidden">
+              <img src={dishExtra2} alt="Plates from the L'Imperial kitchen" className="h-full w-full object-cover aspect-square transition duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
           </div>
         </div>
