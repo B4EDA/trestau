@@ -97,8 +97,13 @@ function Home() {
         <img
           src={heroPasta}
           alt="Signature plates at L'Imperial Kenitra"
+          width={1920}
+          height={1280}
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-[color:var(--foreground)]/70" />
         <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center text-primary-foreground">
           <span className="text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">Depuis 2012 · Kenitra</span>
