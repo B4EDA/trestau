@@ -9,7 +9,48 @@ import interior from "@/assets/real-interior.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
+  head: () => ({
+    links: [
+      { rel: "canonical", href: "https://limperial.lovable.app/" },
+      { rel: "preload", as: "image", href: heroPasta, fetchpriority: "high" } as any,
+    ],
+    meta: [
+      { property: "og:url", content: "https://limperial.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          name: "L'Imperial",
+          image: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/05e7cca9-3a78-4ad1-b5bc-797f304de16a",
+          servesCuisine: ["Italian", "Moroccan"],
+          priceRange: "$$",
+          telephone: "+212 5 37 00 00 00",
+          email: "bonjour@limperial-kenitra.ma",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Avenue Mohammed V",
+            addressLocality: "Kenitra",
+            postalCode: "14000",
+            addressCountry: "MA",
+          },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              opens: "08:00",
+              closes: "23:30",
+            },
+          ],
+          url: "https://limperial.lovable.app/",
+        }),
+      },
+    ],
+  }),
 });
+
 
 const menu = {
   Antipasti: [
@@ -56,8 +97,13 @@ function Home() {
         <img
           src={heroPasta}
           alt="Signature plates at L'Imperial Kenitra"
+          width={1920}
+          height={1280}
+          fetchPriority="high"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-[color:var(--foreground)]/70" />
         <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center text-primary-foreground">
           <span className="text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">Depuis 2012 · Kenitra</span>
@@ -145,10 +191,10 @@ function Home() {
                       <div className="flex-1">
                         <div className="flex items-baseline gap-3">
                           <h4 className="text-lg text-white">{item.name}</h4>
-                          <span className="flex-1 border-b border-dotted border-white/25 translate-y-[-4px]" />
+                          <span className="flex-1 border-b border-dotted border-white/40 translate-y-[-4px]" />
                           <span className="text-[color:var(--gold)] font-medium">{item.price} DH</span>
                         </div>
-                        <p className="mt-1 text-sm text-white/60 leading-relaxed">{item.desc}</p>
+                        <p className="mt-1 text-sm text-white/80 leading-relaxed">{item.desc}</p>
                       </div>
                     </li>
                   ))}
@@ -211,12 +257,12 @@ function Home() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">Hours</div>
                   <div className="mt-2">Tue–Sun · 08:00 – 23:30</div>
-                  <div className="text-white/50 text-sm">Closed Mondays</div>
+                  <div className="text-white/75 text-sm">Closed Mondays</div>
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">Contact</div>
                   <div className="mt-2">+212 5 37 00 00 00</div>
-                  <div className="text-white/50 text-sm">bonjour@limperial-kenitra.ma</div>
+                  <div className="text-white/75 text-sm">bonjour@limperial-kenitra.ma</div>
                 </div>
               </div>
             </div>
@@ -243,12 +289,13 @@ function Home() {
                   <input required type="time" className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition" />
                 </label>
               </div>
-              <label className="block">
+              <label htmlFor="reservation-guests" className="block">
                 <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Guests</span>
-                <select className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition">
+                <select id="reservation-guests" name="guests" aria-label="Number of guests" className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition">
                   {[1,2,3,4,5,6,7,8].map((n) => <option key={n}>{n} {n===1?"guest":"guests"}</option>)}
                 </select>
               </label>
+
               <label className="block">
                 <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phone</span>
                 <input required className="mt-2 w-full border-b border-border bg-transparent py-2 outline-none focus:border-primary transition" />
@@ -261,7 +308,7 @@ function Home() {
         </div>
       </section>
 
-      <footer className="bg-[color:var(--foreground)] text-white/50 border-t border-white/10">
+      <footer className="bg-[color:var(--foreground)] text-white/75 border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col sm:flex-row items-center justify-between gap-4 px-6 py-8 text-xs uppercase tracking-[0.2em]">
           <div className="font-display text-lg normal-case tracking-normal text-white">L'Imperial · Kenitra</div>
           <div>© {new Date().getFullYear()} — Cucina & Cuisine</div>
