@@ -143,7 +143,7 @@ function Home() {
               Two coastlines,<br /> one long table.
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              L'Imperial began in a small dining room off Avenue Mohammed V — a chef
+              trestau began in a small dining room off Avenue Mohammed V — a chef
               from Bologna, a grandmother from Fès, and a stubborn belief that
               tagliatelle and tagine belong to the same evening.
             </p>
