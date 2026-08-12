@@ -23,17 +23,17 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Restaurant",
-          name: "L'Imperial",
+          name: "trestau",
           image: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/05e7cca9-3a78-4ad1-b5bc-797f304de16a",
           servesCuisine: ["Italian", "Moroccan"],
           priceRange: "$$",
           telephone: "+212 5 37 00 00 00",
-          email: "bonjour@limperial-kenitra.ma",
+          email: "bonjour@trestau-rabat.ma",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Avenue Mohammed V",
-            addressLocality: "Kenitra",
-            postalCode: "14000",
+            addressLocality: "Rabat",
+            postalCode: "10000",
             addressCountry: "MA",
           },
           openingHoursSpecification: [
@@ -80,7 +80,7 @@ function Home() {
     <div className="min-h-screen">
       <header className="absolute top-0 left-0 right-0 z-20">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-primary-foreground">
-          <a href="#top" className="font-display text-2xl tracking-wide">L'Imperial</a>
+          <a href="#top" className="font-display text-2xl tracking-wide">trestau</a>
           <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-[0.2em]">
             <a href="#menu" className="hover:text-[color:var(--gold)] transition">Menu</a>
             <a href="#about" className="hover:text-[color:var(--gold)] transition">About</a>
@@ -106,7 +106,7 @@ function Home() {
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-[color:var(--foreground)]/70" />
         <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 text-center text-primary-foreground">
-          <span className="text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">Depuis 2012 · Kenitra</span>
+          <span className="text-xs uppercase tracking-[0.4em] text-[color:var(--gold)]">Depuis 2012 · Rabat</span>
           <h1 className="mt-6 font-display text-5xl leading-[1.05] text-balance md:text-7xl lg:text-8xl">
             A table set between<br />
             <em className="italic text-[color:var(--gold)]">Italy</em> and <em className="italic text-[color:var(--gold)]">Morocco</em>.
@@ -251,7 +251,7 @@ function Home() {
             <div className="mt-10 space-y-6 text-white/85">
               <div>
                 <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">Address</div>
-                <div className="mt-2 font-display text-2xl">Avenue Mohammed V, Kenitra 14000, Morocco</div>
+                <div className="mt-2 font-display text-2xl">Avenue Mohammed V, Rabat 10000, Morocco</div>
               </div>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
@@ -262,7 +262,7 @@ function Home() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-[color:var(--gold)]">Contact</div>
                   <div className="mt-2">+212 5 37 00 00 00</div>
-                  <div className="text-white/75 text-sm">bonjour@limperial-kenitra.ma</div>
+                  <div className="text-white/75 text-sm">bonjour@trestau-rabat.ma</div>
                 </div>
               </div>
             </div>
