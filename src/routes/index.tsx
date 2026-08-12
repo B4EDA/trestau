@@ -310,7 +310,7 @@ function Home() {
 
       <footer className="bg-[color:var(--foreground)] text-white/75 border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col sm:flex-row items-center justify-between gap-4 px-6 py-8 text-xs uppercase tracking-[0.2em]">
-          <div className="font-display text-lg normal-case tracking-normal text-white">L'Imperial · Kenitra</div>
+          <div className="font-display text-lg normal-case tracking-normal text-white">trestau · rabat</div>
           <div>© {new Date().getFullYear()} — Cucina & Cuisine</div>
         </div>
       </footer>
